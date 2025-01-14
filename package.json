@@ -1,14 +1,14 @@
 {
 	"name": "lemuriaapi",
 	"version": "1.0.0",
-	"description": "",
+	"description": "API for Lemuria",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js",
 		"test": "npx mocha"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "JRoniel",
 	"license": "ISC",
 	"dependencies": {
 		"dotenv": "^16.4.7",
