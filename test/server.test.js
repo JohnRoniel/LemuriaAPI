@@ -1,11 +1,11 @@
-const assert = require('assert');
-const server = require('../server'); // Adjust the path as necessary
+const assert = require("node:assert");
+const { start, stop } = require("../index");
 
-describe('Server Startup', () => {
-    it('should start without errors', (done) => {
-        server.start((err) => {
-            assert.strictEqual(err, null);
-            done();
-        });
-    });
+describe("Server Tests", () => {
+	it("should start the server without errors", (done) => {
+		start((err) => {
+			assert.strictEqual(err, null);
+			stop(done);
+		});
+	});
 });
