@@ -1,11 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const consign = require("consign");
 
 const app = express();
 
 let server;
 
 dotenv.config();
+
+//Routes with Consign
+consign().include("app/routes").into(app);
 
 function start(callback) {
 	server = app.listen(3030, () => {

@@ -11,10 +11,12 @@
 	"author": "JRoniel",
 	"license": "ISC",
 	"dependencies": {
+		"consign": "^0.1.6",
 		"dotenv": "^16.4.7",
 		"express": "^4.21.2"
 	},
 	"devDependencies": {
-		"mocha": "^11.0.1"
+		"mocha": "^11.0.1",
+		"supertest": "^7.0.0"
 	}
 }
