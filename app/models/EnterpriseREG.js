@@ -1,5 +1,11 @@
 const mongoose = require("mongoose");
 
+/*
+ * Schema de empresas registradas
+ * _id: id da empresa (gerado automaticamente)
+ * name: nome da empresa
+ * cnpj: CNPJ da empresa
+ */
 const enterpriseSchema = new mongoose.Schema({
 	_id: {
 		type: Number,
