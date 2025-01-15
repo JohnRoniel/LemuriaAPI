@@ -5,21 +5,30 @@ const consign = require("consign");
 const app = express();
 
 let server;
+const serverPort = process.env.SERVER_PORT;
 
 dotenv.config();
 
-//Routes with Consign
+//Use JSON in the application
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Added Routes with Consign
 consign().include("app/routes").into(app);
 
+// Connect to MongoDB before starting the server
+require("./app/Database/indexDatabase")(app);
+
 function start(callback) {
-	server = app.listen(3030, () => {
-		console.log("Server is running on port 3030");
+	server = app.listen(serverPort, () => {
+		console.log(`Server is running on port ${serverPort}`);
 		if (callback) callback(null);
 	});
 }
 
 function stop(callback) {
 	if (server) {
+		console.log(`Stopping server on port ${serverPort}`);
 		server.close(callback);
 	}
 }
