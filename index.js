@@ -4,10 +4,11 @@ const consign = require("consign");
 
 const app = express();
 
+// Load environment variables
+dotenv.config();
+
 let server;
 const serverPort = process.env.SERVER_PORT;
-
-dotenv.config();
 
 //Use JSON in the application
 app.use(express.json());
