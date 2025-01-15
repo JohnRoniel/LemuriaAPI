@@ -14,6 +14,6 @@ module.exports = (app) => {
 	 * @route GET /api
 	 */
 	app.get("/api", (req, res) => {
-		res.send("Welcome to the Lemuria API");
+		res.status(200).json("Welcome to the Lemuria API");
 	});
 };

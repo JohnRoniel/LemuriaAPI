@@ -1,5 +1,5 @@
 module.exports = (app) => {
 	app.get("/api/users", (req, res) => {
-		res.send("Users API");
+		res.status(200).json("Users API");
 	});
 };
